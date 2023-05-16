@@ -1,0 +1,46 @@
+:root{
+    /* --black--background:#000; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+body{
+    /* background-color: var(--black--background); */
+}
+
+h1,h2,p{
+    /* color: white; */
+}
+
+/* h1 {
+  text-align: center;
+} */
+
+
+.title{
+    display: flex;
+    border: 1px solid white;
+}
+
+.container-popular-movie,.container-serie{
+
+  display: flex;
+  flex-wrap: nowrap;
+  
+  overflow: auto;
+  width: 100vw;
+  margin-top: 5%;
+  border: 1px solid black;
+}
+
+.movie,.serie{
+
+}
+
+
+
+
