@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const getUpcomingMovie = async () =>{
     const getUrlUpcoming = await fetch("https://api.themoviedb.org/3/movie/popular?language=en-US&page=1", options);    ;
     const urlComingJson = await getUrlUpcoming.json();
-    console.log(urlComingJson);
+    // console.log(urlComingJson);
     let count = 0;
     urlComingJson.results.forEach((movie) => {
 
@@ -36,7 +36,7 @@ window.addEventListener("DOMContentLoaded", () => {
         const ancreBalise = document.createElement("a"); //ancreBalise
         // ancreBalise.href = 'Movie/'+{idMovie};
         ancreBalise.href = "movie/" + idMovie;
-        console.log(ancreBalise);
+        // console.log(ancreBalise);
 
         const titleMovie = document.createElement("h2"); //title Movie
         const imgMovie = document.createElement("img"); //img Movie
@@ -45,7 +45,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         Movie.appendChild(ancreBalise);
         ancreBalise.append(titleMovie, imgMovie);
-        console.log(Movie);
+        // console.log(Movie);
       }
       count ++;
     });
@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
       const getMovieWeek = await urlMovieWeek.json();
 
-      console.log(getMovieWeek);
+      // console.log(getMovieWeek);
       let count = 0;
 
       getMovieWeek.results.forEach((mov) => {
@@ -69,7 +69,7 @@ window.addEventListener("DOMContentLoaded", () => {
           const title = mov.title;
           const imgSrc = mov.backdrop_path;
           const idMovie = mov.id;
-          console.log(idMovie);
+          // console.log(idMovie);
   
           const movieRated = document.createElement("div");
           movieRated.classList.add("movieTopRated");
@@ -77,7 +77,7 @@ window.addEventListener("DOMContentLoaded", () => {
           const ancreBalise = document.createElement("a"); //ancreBalise
           // ancreBalise.href = 'Movie/'+{idMovie};
           ancreBalise.href = "movie/" + idMovie;
-          console.log(ancreBalise);
+          // console.log(ancreBalise);
   
           const titleMovie = document.createElement("h2"); //title Movie
           const imgMovie = document.createElement("img"); //img Movie
@@ -85,7 +85,7 @@ window.addEventListener("DOMContentLoaded", () => {
           imgMovie.src = "https://image.tmdb.org/t/p/w400" + imgSrc;
           movieRated.appendChild(ancreBalise);
           ancreBalise.append(titleMovie, imgMovie);
-          console.log(containerMovieTopRated);
+          // console.log(containerMovieTopRated);
 
           // Movie.append(titleMovie);
           // Movie.append(imgMovie);
@@ -105,23 +105,32 @@ window.addEventListener("DOMContentLoaded", () => {
         options
       );
       const urlSerieAir = await getUrlSerieOnAir.json();
+      console.log(urlSerieAir);
       let count = 0;
       urlSerieAir.results.forEach((serie) => {
         const titleSerie = serie.name;
         const imgSrc = serie.backdrop_path;
+        const idSerie = serie.id;
+
 
         if (count < 8) {
           const Serie = document.createElement("div");
           Serie.classList.add("series");
           containerSerie.append(Serie);
+
+
           const titleS = document.createElement("h2");
           const imgSerie = document.createElement("img");
+          const ancreSerie = document.createElement('a');
+
+          ancreSerie.href = "serie/" + idSerie;
           titleS.innerText = titleSerie;
           imgSerie.src = "https://image.tmdb.org/t/p/w400" + imgSrc;
-          Serie.append(titleS);
-          Serie.append(imgSerie);
-          // console.log(Serie);
-          // console.log(img);
+
+          Serie.append(ancreSerie);
+          ancreSerie.append(titleS,imgSerie);
+          console.log(Serie);
+         
         }
         count++;
       });
