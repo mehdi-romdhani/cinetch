@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --black--background:#241623;
+}
+body{
+    background-color: var(--black--background);
+}
+h1,h2,h3,p,small{
+    color: white;
+    text-align: center;
+}
+.container-one-Serie,.OneSerie,.resume-one-serie{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.OneSerie{
+    border: 1px solid red;
+}
+.OneSerie h2{
+    padding: 3%;
+}
+.resume-one-serie{
+    margin-top: 5%;
+}
+.resume-one-serie h3{
+    padding: 3%;
+}
+.resume-one-serie small{
+    margin-top: 3%;
+}
+.container-ancre{
+    margin-top: 3%;
+}
+.container-ancre a{
+    color : green;
+    text-decoration: none;
+}
+.container-ancre a:hover{
+    cursor: pointer;
+}
+.OneSerie img{
+    width : 80%;
+
+}

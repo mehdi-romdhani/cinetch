@@ -20,6 +20,9 @@ $router->map('GET', '/movie/[i:id]', function ($id) {
     require_once(__DIR__ . '/src/View/viewOneMovie.php');
 }, 'oneMovie');
 
+$router->map('GET', '/serie/[i:id]',function($id){
+    require_once(__DIR__ . "/src/View/ViewOneSerie.php");
+},'serie');
 
 //Config route
 $match = $router->match();

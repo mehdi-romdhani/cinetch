@@ -37,9 +37,18 @@ h1,h2,p{
   border: 1px solid black;
 }
 
-.movie,.movieTopRated a{
+.movieUpCom a {
     text-decoration: none;
-    color: black;
+    /* color: black; */
+}
+
+.movieTopRated a {
+  text-decoration: none;
+  /* color: black; */
+}
+.series a{
+  text-decoration: none;
+
 }
 
 .movie a:hover{

@@ -61,7 +61,10 @@ window.addEventListener('DOMContentLoaded',()=>{
         genreSmallMovie.innerText = "Genre : " + genreMovie;
         const authorMovie = document.createElement('small');//Author
         authorMovie.innerText = "Author : " + releaseDate;
-        divResume.append(titleParaResume,paraResume,genreSmallMovie);
+        const prodMovie = document.createElement('small');
+        prodMovie.innerText = prodCompany;
+
+        divResume.append(titleParaResume,paraResume,genreSmallMovie,authorMovie,prodMovie);
 
         //Third Child Div 
         const divGoBack = document.createElement('div');
