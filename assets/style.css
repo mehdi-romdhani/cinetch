@@ -1,5 +1,5 @@
 :root{
-    /* --black--background:#000; */
+    --black--background:#241623;
 }
 
 * {
@@ -9,11 +9,11 @@
 }
 
 body{
-    /* background-color: var(--black--background); */
+    background-color: var(--black--background);
 }
 
 h1,h2,p{
-    /* color: white; */
+    color: white;
 }
 
 /* h1 {
@@ -26,7 +26,7 @@ h1,h2,p{
     border: 1px solid white;
 }
 
-.container-popular-movie,.container-serie{
+.container-movie-top-rated,.container-serie,.container-upcoming-movie{
 
   display: flex;
   flex-wrap: nowrap;
@@ -37,8 +37,13 @@ h1,h2,p{
   border: 1px solid black;
 }
 
-.movie,.serie{
+.movie,.movieTopRated a{
+    text-decoration: none;
+    color: black;
+}
 
+.movie a:hover{
+    cursor: pointer;
 }
 
 

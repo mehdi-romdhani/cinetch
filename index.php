@@ -1,3 +1,7 @@
+<?php
+require 'vendor/autoload.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +13,7 @@
     <link rel="stylesheet" href="./assets/style.css">
     <!-- LINK JS -->
     <script defer src="./scripts/script.js"></script>
+    <script defer src="./scripts/searchbar.js"></script>
     <title>CineGenius</title>
 </head>
 
@@ -16,42 +21,34 @@
 
 
 
-
-
-    <div class="container-logo">
-        <nav class="navbar">
-            <!-- <img src="./assets/img/logo-stream.png" alt="logo"> -->
-            <ul>
-                <li> <a href="">Home</a> </li>
-                <li> <a href="">Movies</a> </li>
-                <li> <a href="">Series</a> </li>
-                <li> <a href="">Login</a> </li>
-            </ul>
-        </nav>
-
-        <header>
-            <form action="">
-                <label for=""></label>
-                <input type="text" placeholder="Search">
-            </form>
-        </header>
-
-    </div>
+<?php require_once('./src/View/header.php')?>
 
     <div class="title">
-        <p>Most Popular Movie</p>
+        <p>Upcoming Movie</p>
     </div>
 
-    <div class="container-popular-movie">
+    <div class="container-upcoming-movie">
 
     </div>
+    
+    <div class="title">
+        <p>Movie Top Rated</p>
+    </div>
+
+    <div class="container-movie-top-rated">
+
+    </div>
+    
     <div class="title">
         <p>Series Top Rated</p>
     </div>
 
     <div class="container-serie">
-        
+
     </div>
+
+
+
 </body>
 
 </html>
