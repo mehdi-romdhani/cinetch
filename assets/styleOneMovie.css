@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --black--background:#241623;
+}
+
+body{
+    background-color: var(--black--background);
+}
+
+h1,h2,h3,p,small{
+    color: white;
+    text-align: center;
+}
+
+.container-one-movie,.OneMovie,.resume-one-movie{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.OneMovie{
+    border: 1px solid red;
+}
+.OneMovie h2{
+    padding: 3%;
+}
+.resume-one-movie{
+    margin-top: 5%;
+}
+.resume-one-movie h3{
+    padding: 3%;
+}
+.resume-one-movie small{
+    margin-top: 3%;
+}
+.container-ancre{
+    margin-top: 3%;
+}
+.container-ancre a{
+    color : green;
+    text-decoration: none;
+}
+
+.container-ancre a:hover{
+    cursor: pointer;
+}
+
+.OneMovie img{
+    width : 80%;
+
+}
