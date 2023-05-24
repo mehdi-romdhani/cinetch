@@ -11,8 +11,8 @@ $router->setBasePath('/Projets/cinetch');
 
 
 $router->map('GET', '/home', function () {
-    require_once(__DIR__ . '/index.php');
-    var_dump(__DIR__ );
+    require_once(__DIR__ . '/src/View/viewIndex.php');
+    // var_dump(__DIR__ );
     // echo "hello";
 }, 'home');
 
@@ -20,12 +20,21 @@ $router->map('GET', '/movie/[i:id]', function ($id) {
     require_once(__DIR__ . '/src/View/viewOneMovie.php');
 }, 'oneMovie');
 
-$router->map('GET', '/serie/[i:id]',function($id){
+$router->map('GET', '/serie/[i:id]', function ($id) {
     require_once(__DIR__ . "/src/View/ViewOneSerie.php");
-},'serie');
+}, 'serie');
+
+$router->map('GET','/movies',function(){
+    require_once(__DIR__."/src/View/ViewMovies.php");
+},'movies');
+
+$router->map('GET', '/login', function () {
+    require_once(__DIR__ . '/src/View/ViewLogin.php');
+}, 'login');
 
 //Config route
 $match = $router->match();
+
 // var_dump($match);
 
 if (is_array($match) && is_callable($match['target'])) {
