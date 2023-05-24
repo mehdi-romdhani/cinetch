@@ -15,7 +15,6 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
 
-
   const getUpcomingMovie = async () =>{
     const getUrlUpcoming = await fetch("https://api.themoviedb.org/3/movie/popular?language=en-US&page=1", options);    ;
     const urlComingJson = await getUrlUpcoming.json();
@@ -98,6 +97,7 @@ window.addEventListener("DOMContentLoaded", () => {
       console.error(error);
     }
   };
+
   const getSerieOnAir = async () => {
     try {
       const getUrlSerieOnAir = await fetch(
