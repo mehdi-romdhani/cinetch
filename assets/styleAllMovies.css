@@ -55,4 +55,56 @@ body {
     width: 300px;
   }
   
+
+  .container-movies {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .container-movies div {
+    background-color: #111;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .container-movies p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .container-movies img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  a:hover{
+    color: orange;
+  }
+
+  .container-ancre{
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+    
+  }
+
+  h2{
+    margin-left:35px;
+  }
+  
+  /* Styles pour les appareils mobiles */
+  @media (max-width: 768px) {
+    .container-movies {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
   

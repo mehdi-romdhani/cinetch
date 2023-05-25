@@ -13,8 +13,13 @@
 </head>
 <body>
    <?php require_once('header.php') ?>
+   <h2>All Movies</h2>
    <div class="container-movies">
-    
-   </div>
+    </div>
+
+    <div class="container-ancre">
+        <a href="" id="previousAncre">Previous</a>
+        <a href="" id="nextAncre">Next</a>
+    </div>
 </body>
 </html>
